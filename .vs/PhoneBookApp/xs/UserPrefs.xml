@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{234C2740-F1DD-4352-9A41-497577671F79}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.PhoneBookApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PhoneBookApp/Views/Contact/Update.cshtml">
+    <Files>
+      <File FileName="PhoneBookApp/Models/Contact.cs" Line="27" Column="19" />
+      <File FileName="PhoneBookApp/Repositories/Interfaces/IContactService.cs" Line="20" Column="3" />
+      <File FileName="PhoneBookApp/Repositories/Implementation/ContactService.cs" Line="100" Column="29" />
+      <File FileName="PhoneBookApp/Program.cs" />
+      <File FileName="PhoneBookApp/Models/DatabaseContext.cs" Line="14" Column="3" />
+      <File FileName="PhoneBookApp/Repositories/Implementation/CountryService.cs" Line="33" Column="13" />
+      <File FileName="PhoneBookApp/Views/Contact/Add.cshtml" Line="49" Column="77" />
+      <File FileName="PhoneBookApp/Views/Contact/Update.cshtml" Line="1" Column="1" />
+      <File FileName="PhoneBookApp/Views/Contact/GetAll.cshtml" Line="1" Column="1" />
+      <File FileName="PhoneBookApp/Models/Country.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PhoneBookApp" expanded="True">
+            <Node name="PhoneBookApp" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Repositories" expanded="True">
+                <Node name="Implementation" expanded="True" />
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Contact" expanded="True">
+                  <Node name="Update.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
