@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YukSGLsXQ2uhuV9T3cpToX9EbCMo87qjy52SW3i90S8=",
+  "Hash": "GKT/LmrTRbVfQGOyrhRA1I5se9spUdtO/FFR2ctCjsY=",
   "Source": "PhoneBookApp",
   "BasePath": "_content/PhoneBookApp",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg",
+      "SourceId": "PhoneBookApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/",
+      "BasePath": "_content/PhoneBookApp",
+      "RelativePath": "ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg"
     }
   ]
 }

@@ -17,10 +17,15 @@ namespace PhoneBookApp.Controllers
 
         private readonly ICountryService countryService;
 
-        public ContactController(IContactService contactService, ICountryService countryService)
+        private readonly IFileService fileService;
+
+        
+
+        public ContactController(IContactService contactService, ICountryService countryService, IFileService fileService)//added iwebhost
         {
             this.contactService = contactService;
             this.countryService = countryService;
+            this.fileService = fileService;
         }
 
 
@@ -36,10 +41,23 @@ namespace PhoneBookApp.Controllers
         public IActionResult Add(Contact model)
         {
             model.CountryList = countryService.GetAll().Select(a => new SelectListItem { Text = a.CountryName, Value = a.Id.ToString(), Selected = a.Id == model.CountryId }).ToList();
+
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
+            //Added here
+            if (model.ProfilePicture != null)
+            {
+                var fileResult = this.fileService.SaveImage(model.ProfilePicture);
+                if (fileResult.Item1 == 0)
+                {
+                    TempData["msg"] = "Couldn't save file";
+                    return View(model);
+                }
+            }
+
+
             var result = contactService.Add(model);
             if (result)
             {
@@ -66,6 +84,18 @@ namespace PhoneBookApp.Controllers
             {
                 return View(model);
             }
+            // added here
+
+            if (model.ProfilePicture != null)
+            {
+                var fileResult = this.fileService.SaveImage(model.ProfilePicture);
+                if (fileResult.Item1 == 0)
+                {
+                    TempData["msg"] = "Couldn't save file";
+                    return View(model);
+                }
+            }
+
             var result = contactService.Update(model);
             if (result)
             {

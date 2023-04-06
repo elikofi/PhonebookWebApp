@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/PhoneBookApp.bundle.scp.css"
     },
     {
+      "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg",
+      "PackagePath": "staticwebassets/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg"
+    },
+    {
       "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

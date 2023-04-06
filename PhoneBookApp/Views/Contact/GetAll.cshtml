@@ -19,6 +19,9 @@
                     <th>Address</th>
                     <th>Birthday</th>
                     <th>About</th>
+                    <th>Country</th>
+                    <th>Starting</th>
+                    <th>Picture</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -33,6 +36,12 @@
                         <td>@item.Address</td>
                         <td>@item.BirthDay</td>
                         <td>@item.About</td>
+                        <td>@item.CountryName</td>
+                        <td>@item.StartingDate</td>
+                        <td>
+                            <img style="height:30px;width:40px" src="/ProfilePicture/@item.ProfilePicture" />
+                        </td>
+
                         <td>
                             <a class="btn btn-outline-primary" href="/Contact/Update?id=@item.Id">Edit</a>
                             <a class="btn btn-outline-danger" onclick="return window.confirm('Are you sure')" href="/Contact/Delete?id=@item.Id">Delete</a>

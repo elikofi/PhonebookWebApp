@@ -66,7 +66,8 @@ namespace PhoneBookApp.Repositories.Implementation
                               Address = contact.Address,
                               BirthDay = contact.BirthDay,
                               About = contact.About,
-                              CountryName = contact.CountryName
+                              CountryName = country.CountryName,
+                              StartingDate = contact.StartingDate
                           }).ToList();
             return result;
         }
@@ -86,7 +87,8 @@ namespace PhoneBookApp.Repositories.Implementation
                               Address = contact.Address,
                               BirthDay = contact.BirthDay,
                               About = contact.About,
-                              CountryName = contact.CountryName
+                              CountryName = country.CountryName,
+                              StartingDate = contact.StartingDate
                           }).ToList();
             return result;
         }

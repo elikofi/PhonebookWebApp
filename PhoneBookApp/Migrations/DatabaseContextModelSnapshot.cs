@@ -33,8 +33,8 @@ namespace PhoneBookApp.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<DateTime>("BirthDay")
-                        .HasColumnType("datetime(6)");
+                    b.Property<DateOnly>("BirthDay")
+                        .HasColumnType("date");
 
                     b.Property<int>("CountryId")
                         .HasColumnType("int");
@@ -54,7 +54,12 @@ namespace PhoneBookApp.Migrations
                     b.Property<int>("Number")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("StartingDate")
+                        .HasColumnType("datetime(6)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Contact");
                 });
@@ -72,6 +77,17 @@ namespace PhoneBookApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Country");
+                });
+
+            modelBuilder.Entity("PhoneBookApp.Models.Contact", b =>
+                {
+                    b.HasOne("PhoneBookApp.Models.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
                 });
 #pragma warning restore 612, 618
         }

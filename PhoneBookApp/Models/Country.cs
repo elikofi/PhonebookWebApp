@@ -12,6 +12,8 @@ namespace PhoneBookApp.Models
 		//making this required because we don't want it to be nullable.
 		[Required]
 		public string? CountryName { get; set; }
+
+		//public object? Picture { get; set; }
 	}
 }
 

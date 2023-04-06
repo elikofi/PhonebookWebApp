@@ -16,6 +16,8 @@ namespace PhoneBookApp.Models
 		public DbSet<Country> Country { get; set; }
 
 		public DbSet<Contact> Contact { get; set; }
+
+		//public DbSet<Image> Images { get; set; }
 	}
 }
 

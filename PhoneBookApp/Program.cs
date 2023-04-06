@@ -16,6 +16,7 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 //on all the DI objects in the constructor.
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 
