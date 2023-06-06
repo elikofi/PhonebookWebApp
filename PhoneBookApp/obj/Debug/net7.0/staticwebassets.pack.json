@@ -5,16 +5,24 @@
       "PackagePath": "staticwebassets/PhoneBookApp.bundle.scp.css"
     },
     {
-      "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg",
-      "PackagePath": "staticwebassets/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg"
-    },
-    {
       "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/images/profilepic/03570f29-ab5c-4470-b29b-0a2824b87479.jpeg",
+      "PackagePath": "staticwebassets/images/profilepic/03570f29-ab5c-4470-b29b-0a2824b87479.jpeg"
+    },
+    {
+      "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/images/profilepic/844ba10f-80bb-40a5-b4fb-fe7c6d48a986.jpeg",
+      "PackagePath": "staticwebassets/images/profilepic/844ba10f-80bb-40a5-b4fb-fe7c6d48a986.jpeg"
+    },
+    {
+      "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/images/profilepic/ca12092c-b7af-4db6-88cc-fc09d6ceb586.jpeg",
+      "PackagePath": "staticwebassets/images/profilepic/ca12092c-b7af-4db6-88cc-fc09d6ceb586.jpeg"
     },
     {
       "Id": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/js/site.js",

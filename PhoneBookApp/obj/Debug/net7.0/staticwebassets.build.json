@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GKT/LmrTRbVfQGOyrhRA1I5se9spUdtO/FFR2ctCjsY=",
+  "Hash": "USsdkBgnIOW8cvgZmnwUHrYcwWFSDj7TrevVVFxee3k=",
   "Source": "PhoneBookApp",
   "BasePath": "_content/PhoneBookApp",
   "Mode": "Default",
@@ -83,6 +83,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/images/profilepic/03570f29-ab5c-4470-b29b-0a2824b87479.jpeg",
+      "SourceId": "PhoneBookApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/",
+      "BasePath": "_content/PhoneBookApp",
+      "RelativePath": "images/profilepic/03570f29-ab5c-4470-b29b-0a2824b87479.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/profilepic/03570f29-ab5c-4470-b29b-0a2824b87479.jpeg"
+    },
+    {
+      "Identity": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/images/profilepic/844ba10f-80bb-40a5-b4fb-fe7c6d48a986.jpeg",
+      "SourceId": "PhoneBookApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/",
+      "BasePath": "_content/PhoneBookApp",
+      "RelativePath": "images/profilepic/844ba10f-80bb-40a5-b4fb-fe7c6d48a986.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/profilepic/844ba10f-80bb-40a5-b4fb-fe7c6d48a986.jpeg"
+    },
+    {
+      "Identity": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/images/profilepic/ca12092c-b7af-4db6-88cc-fc09d6ceb586.jpeg",
+      "SourceId": "PhoneBookApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/",
+      "BasePath": "_content/PhoneBookApp",
+      "RelativePath": "images/profilepic/ca12092c-b7af-4db6-88cc-fc09d6ceb586.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/profilepic/ca12092c-b7af-4db6-88cc-fc09d6ceb586.jpeg"
     },
     {
       "Identity": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/js/site.js",
@@ -1069,23 +1120,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
-    },
-    {
-      "Identity": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg",
-      "SourceId": "PhoneBookApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/elijahamoako/Desktop/Portfolio/ASP.NET Core/PhoneBookApp/PhoneBookApp/wwwroot/",
-      "BasePath": "_content/PhoneBookApp",
-      "RelativePath": "ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/ProfilePicture/ca4aa7dc-f89f-4733-951d-8ecd5bd28898.jpg"
     }
   ]
 }

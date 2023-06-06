@@ -46,6 +46,23 @@ namespace PhoneBookApp.Repositories.Implementation
             }
         }
 
+        public bool Details(int id)
+        {
+            try
+            {
+                var result = this.FindById(id);
+                if (result == null)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
         public Contact FindById(int id)
         {
             return context.Contact.Find(id);
@@ -66,8 +83,7 @@ namespace PhoneBookApp.Repositories.Implementation
                               Address = contact.Address,
                               BirthDay = contact.BirthDay,
                               About = contact.About,
-                              CountryName = country.CountryName,
-                              StartingDate = contact.StartingDate
+                              CountryName = country.CountryName
                           }).ToList();
             return result;
         }
@@ -87,8 +103,7 @@ namespace PhoneBookApp.Repositories.Implementation
                               Address = contact.Address,
                               BirthDay = contact.BirthDay,
                               About = contact.About,
-                              CountryName = country.CountryName,
-                              StartingDate = contact.StartingDate
+                              CountryName = country.CountryName
                           }).ToList();
             return result;
         }

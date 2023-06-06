@@ -17,6 +17,8 @@ namespace PhoneBookApp.Repositories.Interfaces
 		IEnumerable<Contact> GetAll();
 
 		IEnumerable<Contact> GetBySearch();
+
+		bool Details(int id);
 	}
 }
 

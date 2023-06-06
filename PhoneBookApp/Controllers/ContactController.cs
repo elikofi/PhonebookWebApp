@@ -17,15 +17,15 @@ namespace PhoneBookApp.Controllers
 
         private readonly ICountryService countryService;
 
-        private readonly IFileService fileService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
         
 
-        public ContactController(IContactService contactService, ICountryService countryService, IFileService fileService)//added iwebhost
+        public ContactController(IContactService contactService, ICountryService countryService, IWebHostEnvironment webHostEnvironment)//added iwebhost
         {
             this.contactService = contactService;
             this.countryService = countryService;
-            this.fileService = fileService;
+            _webHostEnvironment = webHostEnvironment;
         }
 
 
@@ -38,25 +38,27 @@ namespace PhoneBookApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(Contact model)
+        public IActionResult Add(Contact model, IFormFile? file)
         {
             model.CountryList = countryService.GetAll().Select(a => new SelectListItem { Text = a.CountryName, Value = a.Id.ToString(), Selected = a.Id == model.CountryId }).ToList();
-
+           
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-            //Added here
-            if (model.ProfilePicture != null)
-            {
-                var fileResult = this.fileService.SaveImage(model.ProfilePicture);
-                if (fileResult.Item1 == 0)
-                {
-                    TempData["msg"] = "Couldn't save file";
-                    return View(model);
-                }
-            }
 
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            if (file != null)
+            {
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                string contactPath = Path.Combine(wwwRootPath, @"images/profilepic");
+
+                using (var fileStream = new FileStream(Path.Combine(contactPath, fileName), FileMode.Create))
+                {
+                    file.CopyTo(fileStream);
+                }
+                model.ImageUrl = @"/images/profilepic/" + fileName;
+            }
 
             var result = contactService.Add(model);
             if (result)
@@ -77,24 +79,27 @@ namespace PhoneBookApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Contact model)
+        public IActionResult Update(Contact model, IFormFile? file)
         {
             model.CountryList = countryService.GetAll().Select(a => new SelectListItem { Text = a.CountryName, Value = a.Id.ToString(), Selected = a.Id == model.CountryId }).ToList();
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-            // added here
 
-            if (model.ProfilePicture != null)
+            string wwwRootPath = _webHostEnvironment.WebRootPath;
+            if (file != null)
             {
-                var fileResult = this.fileService.SaveImage(model.ProfilePicture);
-                if (fileResult.Item1 == 0)
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                string contactPath = Path.Combine(wwwRootPath, @"images/profilepic");
+
+                using (var fileStream = new FileStream(Path.Combine(contactPath, fileName), FileMode.Create))
                 {
-                    TempData["msg"] = "Couldn't save file";
-                    return View(model);
+                    file.CopyTo(fileStream);
                 }
+                model.ImageUrl = @"/images/profilepic/" + fileName;
             }
+
 
             var result = contactService.Update(model);
             if (result)
@@ -124,6 +129,13 @@ namespace PhoneBookApp.Controllers
         {
             var result = contactService.GetAll().Where(x => x.FirstName.ToLower().Contains(searchQuery.ToLower()));
             return View(result);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var model = contactService.FindById(id);
+            model.CountryList = countryService.GetAll().Select(a => new SelectListItem { Text = a.CountryName, Value = a.Id.ToString(), Selected = a.Id == model.CountryId }).ToList();
+            return View(model);
         }
     }
 }

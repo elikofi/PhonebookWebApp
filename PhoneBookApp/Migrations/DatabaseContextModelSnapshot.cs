@@ -16,7 +16,7 @@ namespace PhoneBookApp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.4")
+                .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("PhoneBookApp.Models.Contact", b =>
@@ -47,19 +47,19 @@ namespace PhoneBookApp.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Number")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartingDate")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("Number")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CountryId");
 
                     b.ToTable("Contact");
                 });
@@ -77,17 +77,6 @@ namespace PhoneBookApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Country");
-                });
-
-            modelBuilder.Entity("PhoneBookApp.Models.Contact", b =>
-                {
-                    b.HasOne("PhoneBookApp.Models.Country", "Country")
-                        .WithMany()
-                        .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Country");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace PhoneBookApp.Models
@@ -10,13 +11,13 @@ namespace PhoneBookApp.Models
 	{
 		[Key] //Primary key for the Contact model.
 		public int Id { get; set; }
-        //all other fields are required because we don't want then to be nullable.
+        //all other fields are required because we want the user to enter these fields.
 		[Required]
 		public string? FirstName { get; set; }
         [Required]
         public string? LastName { get; set; }
         [Required]
-        public int Number { get; set; }
+        public string Number { get; set; }
         [Required]
         public string? Email { get; set; }
         [Required]
@@ -26,15 +27,11 @@ namespace PhoneBookApp.Models
         [Required]
         public string? About { get; set; }
         [Required]
-        public int CountryId { get; set; }
-        public virtual Country? Country { get; set; }//
+        public int CountryId { get; set; }  
 
-        [Required]//have to add views for this
-        public DateTime StartingDate { get; set; }
-
-        [NotMapped]
+        [ValidateNever]
         [DisplayName("Upload picture")]
-        public IFormFile ProfilePicture { get; set; }
+        public string ImageUrl { get; set; }
 
         [NotMapped]
         public string? CountryName { get; set; }
